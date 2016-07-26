@@ -14,6 +14,7 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/ng-cordova.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -25,10 +26,22 @@
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">Tiga Serangkai</h1>
       </ion-header-bar>
-      <ion-content>
-      </ion-content>
+      <ion-view view-title="Login" name="login-view">
+        <ion-content class="padding">
+        <div>
+          <label class="item item-input">
+            <input type="text" placeholder="Username" ng-model="data.username">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Password" ng-model="data.password">
+          </label>
+        </div>
+          <button class="button button-block button-calm" ng-click="login()">Sign In</button> 
+        </ion-content>
+        
+      </ion-view>
     </ion-pane>
   </body>
 </html>
