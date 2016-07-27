@@ -1,7 +1,76 @@
 <ion-view>
-	<input type="text" name="username">
-	<input type="text" name="password">
-	<input type="submit" name="sigin">
-	<input type="submit" name="create">
-	<input type="submit" name="exit">
+<div class="bar bar-header">
+  <button class="button icon ion-navicon"></button>
+  <h1 class="title">Home</h1>
+  <button class="button">Edit</button>
+</div>
+<ion-content class="has-header">
+<section>
+<div class="row">
+	<div class="col">
+		<button class="button button-balanced padding col col-100 padding" ui-sref="import" >
+             <img src="img/siakadv3.png">
+             <p class="text-center">Import data</p>
+        </button>
+	</div>
+	<div class="col">
+		<button class="button button-balanced padding col col-100 padding" ui-sref="export" >
+                <img src="img/siakadv3.png">
+                <p class="text-center">Export Data</p>
+              </button>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<button class="button button-balanced padding col col-100 padding"  ui-sref="inventory" >
+             <img src="img/siakadv3.png">
+             <p class="text-center">Inventory</p>
+        </button>
+	</div>
+	<div class="col">
+		<button class="button button-balanced padding col col-100"  ui-sref="partner" >
+                <img src="img/siakadv3.png">
+                <p class="text-center">Customer</p>
+              </button>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<button class="button button-balanced padding col col-100 padding " ui-sref="ccp" >
+             <img src="img/siakadv3.png">
+             <p class="text-center">CCP</p>
+        </button>
+	</div>
+	<div class="col">
+		<button class="button button-balanced padding col col-100 padding"  ui-sref="order" >
+                <img src="img/siakadv3.png">
+                <p class="text-center">Sales Order</p>
+         </button>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<button class="button button-balanced padding col col-100 padding"  ui-sref="achievement" >
+             <img src="img/siakadv3.png">
+             <p class="text-center">Sales Achievement</p>
+        </button>
+	</div>
+	<div class="col">
+		<button class="button button-balanced padding col col-100 padding"  ui-sref="logout" >
+                <img src="img/siakadv3.png">
+                <p class="text-center">Logout</p>
+              </button>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<button class="button button-block button-balanced padding" >
+             <img src="img/siakadv3.png">
+             <p class="text-center">exit</p>
+        </button>
+	</div>
+</div>
+
+</section>
+</ion-content>
 </ion-view>

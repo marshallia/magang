@@ -1,0 +1,28 @@
+<ion-view>
+<div class="bar bar-header">
+  <button class="button icon ion-navicon"></button>
+  <h1 class="title">Data Partner</h1>
+  <button class="button">Edit</button>
+</div>
+<ion-content ng-controller="popupCtrl" class="has-header">
+		<div ng-repeat="partner in partners">
+		<div class="item item-divider">
+		    {{partner.Name}}
+		  </div>
+
+		  <a class="item" href="#">
+		    {{partner.Country}}
+		  </a>
+		</div>
+		 <div ng-controller="customersCtrl"> 
+
+ <ul>
+      <li ng-repeat="x in names">
+        {{ x.Username }}
+		 {{ x.Password }}
+      </li>
+    </ul>
+
+</div>
+	</ion-content>
+</ion-view>

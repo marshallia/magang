@@ -22,15 +22,103 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+.controller('popupCtrl', function($scope, $ionicPopup) {
+$scope.detailsPartner = function() {
+   var alertPopup = $ionicPopup.alert({
+     title: 'Try again later!',
+     template: 'No Connection Found.'
+   });
+ 
+   alertPopup.then(function(res) {
+     console.log('Thank you for advice.');
+   });
+ };
+})
+
+controller('customersCtrl', function($scope, $http) {
+
+    $http.get("http://localhost:80//BantuanMag/partner.php")
+  .success(function (response) {$scope.names = response.records;});
+});
+.controller('partnerCtrl', function($scope){
+  $scope.partners=[
+  {
+      "Name" : "Alfreds Futterkiste",
+      "Country" : "Germany"
+    },
+    {
+      "Name" : "Berglunds snabbköp",
+      "Country" : "Sweden"
+    },
+    {
+      "Name" : "Centro comercial Moctezuma",
+      "Country" : "Mexico"
+    }]
+})
 
 .config(function($stateProvider,$urlRouterProvider){
+ 
   $stateProvider
   .state('login',{
     url:'/login',
-    templateUrl:'templates/login.html',
-    controller:'loginCtrl'
-  });
+    templateUrl:'templates/login.html'
+  })
+  .state('home',{
+    url:'/home',
+    templateUrl:'templates/home.html'
+  })
+  .state('ccp',{
+    url:'/ccp',
+    templateUrl:'templates/ccp.html'
+  })
+  .state('partner',{
+    url:'/partner',
+    templateUrl:'templates/DataPartner.html',
+    controller:'partnerCtrl'
+  })
+  .state('export',{
+    url:'/export',
+    templateUrl:'templates/export'
+  })
+  .state('import',{
+    url:'/import',
+    templateUrl:'templates/import.html'
+  })
+  .state('inventory',{
+    url:'/inventory',
+    templateUrl:'templates/inventory.html'
+  })
+  .state('achievement',{
+    url:'/achievement',
+    templateUrl:'templates/salesAchievement.html'
+  })
+  .state('order',{
+    url:'/order',
+    templateUrl:'templates/salesOrder.html'
+  })
+  ;
 
-$urlRouterProvider.otherwise('/login.html')
-
+$urlRouterProvider.otherwise('/login');
 })
+
+/*.controller('loginCtrl',function($scope){
+  $scope.data={};
+  $scope.login=function(){
+    console.log("Login user:"+$scope.data.username+"_pw"+$scope.data.password);
+  }
+})
+
+.service('loginService',fuction($q){
+  return{
+    loginUser:function(name,pw){
+      var defered=$q.defer();
+      var promise=defered.promise;
+      if(name=='user' && pw=='password'){
+        defered.revolve('Selamat datang'+name+'!');
+      }else {
+        defered.reject('user atau password salah')
+      }
+      promise.
+    }
+  }
+})*/

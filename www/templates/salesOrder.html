@@ -1,0 +1,60 @@
+<ion-view>
+<div class="bar bar-header">
+  <button class="button icon ion-navicon"></button>
+  <h1 class="title">Sales Order</h1>
+  <button class="button">Edit</button>
+</div>
+
+<ion-content class="has-header">
+	<div class="list">
+	<p>New Sales Order (Open)</p>
+	  	<span>Partner Name</span>
+	   <!-bisa muncul rekomendasi nama sekolah yang ada di partner table lalu bisa dipilih dengan klick->
+	    <input type="text" class="col col-100">
+	  	
+	  	<span>Ship id</span><!-auto input ketika memilih partner name, model dropdown menu->
+	    <input type="text" class="col col-100">
+	    
+	    <span>SO Date</span><!-Today date defaultnya, tapi kalau diklick bisa muncul popup choose calendar->
+	    <input type="date" class="col col-100">
+	    
+	    <span>Del Date</span><!-Today date defaultnya, tapi kalau diklick bisa muncul popup choose calendar->
+	    <input type="date" class="col col-100">
+	  	
+	  	<span>Sales Type</span>
+	  	<select class="col col-100"><!jangan lupa nanti diganti pakescope{{}} data ambil dari database>
+	  		<option>Reguler</option>
+	  		<option>Consignment</option>
+	  	</select>
+	 	
+	 	<span>Fund</span>
+	  	<select class="col col-100"><!jangan lupa nanti diganti pakescope{{}} data ambil dari database>
+	  		<option>Swadaya</option>
+	  		<option>Pemerintah</option>
+	  	</select>
+	  	
+	  	<span>Nomor Referensi</span>
+	  	<input type="text" class="col col-100">
+	  	
+	  	<span>Ref Date</span>
+	  	<input type="date" class="col col-100"><!-Today date defaultnya, tapi kalau diklick bisa muncul popup choose calendar->
+	  	
+	  	<span>Detail Inventory</span><!dibuat button add item lalu ketika diklick kuluar input text, angka sama delete item, lal buttonnya turun kebawah input>
+	  	<div class="item item-button-right">
+		    <input type="text">
+		    <span ></span>
+		    <input type="number">
+		    <button class="button button-positive">
+		      x
+		    </button>
+		  </div>
+	  	<button class="button button-balanced">ADD ITEM</button>
+	  	<br>
+	  	<span>Discount Distributor</span><!dibuat button add item lalu ketika diklick kuluar input text, angka sama delete item, lal buttonnya turun kebawah input>
+	  	<br>
+	  	<button class="button button-balanced">ADD DICOUNT</button>
+	  	<br>
+	  <button class="button button-block button-balanced">SAVE</button>
+	</div>
+</ion-content>
+</ion-view>
